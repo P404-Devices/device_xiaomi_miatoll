@@ -6,6 +6,7 @@
 
 $(call inherit-product, device/xiaomi/miatoll/device.mk)
 $(call inherit-product, vendor/404/configs/common.mk)
+$(call inherit-product, vendor/google/pixel/config.mk)
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
