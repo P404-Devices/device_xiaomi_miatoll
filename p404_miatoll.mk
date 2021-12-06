@@ -6,7 +6,6 @@
 
 $(call inherit-product, device/xiaomi/miatoll/device.mk)
 $(call inherit-product, vendor/404/configs/common.mk)
-$(call inherit-product, vendor/google/pixel/config.mk)
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -18,3 +17,6 @@ PRODUCT_MODEL := SM6250
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Google Apps
+$(call inherit-product, vendor/google/gms/products/gms.mk)
