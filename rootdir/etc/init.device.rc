@@ -8,7 +8,7 @@ service thermal-engine /vendor/bin/thermal-engine
     socket thermal-send-rule stream 0660 system oem_2907
     disabled
 
-service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
+service nqnfc_2_0_hal_service /vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
     override
     class hal
     user nfc
@@ -46,7 +46,7 @@ on init && property:ro.boot.hwname=joyeuse
 
 on init && property:ro.boot.hwname=joyeuse
     setprop ro.boot.product.hardware.sku joyeuse
-    start vendor.nfc_hal_service
+    enable nqnfc_2_0_hal_service
     enable secureelement-hal_1_2
 
 # perf tuning
